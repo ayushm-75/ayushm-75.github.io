@@ -537,9 +537,9 @@ export default function Portfolio() {
         "Microcontroller + Edge Processing"
       ],
       features: [
-        { label: "Breath Input", value: "Chemical patterns in exhaled air" },
-        { label: "Audio Input", value: "Lung sounds (wheeze, crackle, airflow)" },
-        { label: "Output", value: "Disease probability + confidence score" }
+        { label: "Breath Input", value: "Chemical patterns" },
+        { label: "Audio Input", value: "Lung sounds" },
+        { label: "Output", value: "Disease probability + confidence" }
       ],
       github_url: "Private"
     },
@@ -551,8 +551,8 @@ export default function Portfolio() {
       icon: Scan,
       tech: ["Python", "PyTorch", "U-Net-Based Models", "MRI Preprocessing & Mask Handling"],
       features: [
-        { label: "Primary Task", value: "Pixel-Level Tumor Instance Segmentation" },
-        { label: "Evaluation Metric", value: "Dice Score ≥ 0.90 on Validation Data" },
+        { label: "Primary Task", value: "Pixel-Level Tumor Segment" },
+        { label: "Evaluation Metric", value: "Dice Score ≥ 0.90" },
         { label: "Model Output", value: "Tumor Mask + Severity Score" }
       ],
       github_url: "Private"
@@ -620,7 +620,7 @@ export default function Portfolio() {
           <div className="flex-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-2 py-1 bg-neutral-900 border border-neutral-800 rounded text-[10px] font-mono text-cyan-500">
               <Terminal size={12} />
-              <span>17 YR OLD • DEVELOPER • INNOVATOR</span>
+              <span>16 YR OLD • DEVELOPER • INNOVATOR</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
               Ayush Mallick.
@@ -629,7 +629,7 @@ export default function Portfolio() {
               Building Real Systems Across<br/>Software • Hardware • Research
             </h2>
             <p className="text-lg text-neutral-400 max-w-xl leading-relaxed">
-              17 year old passionate developer bridging software, hardware, and applied AI. From secure messaging systems to medical imaging to assistive embedded devices, designing end-to-end solutions with technical depth.
+              16 year old passionate developer bridging software, hardware, and applied AI. From secure messaging systems to medical imaging to assistive embedded devices, designing end-to-end solutions with technical depth.
             </p>
             
             <div className="flex flex-wrap gap-3 pt-4">
