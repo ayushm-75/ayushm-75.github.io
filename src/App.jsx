@@ -215,7 +215,7 @@ const ArchitectureDiagram = ({ type }) => {
   if (type === 'breathesense') {
     return (
       <div className="w-full h-full flex flex-col items-center justify-center p-4 font-mono text-[10px] text-neutral-400 select-none">
-        {/* Hardware Input */}
+        
         <div className="flex gap-4 mb-4">
             <div className="border border-neutral-700 p-2 rounded bg-neutral-900 w-24 text-center">
                 <span className="text-cyan-500 block mb-1">Sensors</span>
@@ -227,7 +227,7 @@ const ArchitectureDiagram = ({ type }) => {
             </div>
         </div>
 
-        {/* Connection Lines Merging */}
+        
         <div className="h-8 w-full flex justify-center relative">
             <div className="absolute bottom-0 h-4 w-px bg-neutral-700"></div>
             <div className="absolute top-1/2 left-1/4 right-1/4 h-px bg-neutral-700"></div>
@@ -235,16 +235,16 @@ const ArchitectureDiagram = ({ type }) => {
             <div className="absolute top-0 right-1/4 h-4 w-px bg-neutral-700"></div>
         </div>
 
-        {/* Connection Lines */}
+        
         <div className="h-8 w-px bg-neutral-700 mb-2"></div>
         
-        {/* Processing Unit */}
+        
         <div className="border border-cyan-900/50 p-3 rounded bg-neutral-900/50 w-64 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-cyan-500/5 animate-pulse"></div>
             <span className="relative z-10 text-neutral-200">Processing Layer (ESP32/Edge)</span>
         </div>
 
-        {/* Connection Lines Splitting */}
+        
         <div className="h-8 w-full flex justify-center relative">
             <div className="absolute top-0 h-4 w-px bg-neutral-700"></div>
             <div className="absolute top-1/2 left-1/4 right-1/4 h-px bg-neutral-700"></div>
@@ -252,7 +252,7 @@ const ArchitectureDiagram = ({ type }) => {
             <div className="absolute top-1/2 right-1/4 h-4 w-px bg-neutral-700 mt-0"></div>
         </div>
 
-        {/* AI Models */}
+        
         <div className="flex gap-8 mt-1">
             <div className="border border-purple-900/50 p-2 rounded bg-neutral-900 w-28 text-center">
                 <span className="text-purple-400 block">Model A</span>
@@ -264,7 +264,7 @@ const ArchitectureDiagram = ({ type }) => {
             </div>
         </div>
 
-        {/* Fusion */}
+        
         <div className="h-6 w-px bg-neutral-700 mt-2"></div>
         <div className="border border-neutral-700 p-2 rounded bg-neutral-950 w-32 text-center text-xs text-white">
             Confidence Fusion
@@ -275,7 +275,7 @@ const ArchitectureDiagram = ({ type }) => {
   return null;
 };
 
-// --- Main Components ---
+//Main Components
 
 const DomainCard = ({ title, icon: Icon, description, technologies }) => (
   <div className="border border-neutral-800 bg-neutral-900/30 p-6 hover:border-neutral-700 transition-all group">
@@ -355,7 +355,7 @@ const ProjectCard = ({ project, expanded, onClick }) => {
             </div>
 
             <div className="flex items-center gap-3">
-              {/* STATUS */}
+              
               <span
                 className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
                   project.status === "ACTIVE"
@@ -368,7 +368,7 @@ const ProjectCard = ({ project, expanded, onClick }) => {
                 {project.status}
               </span>
 
-              {/* GITHUB BUTTON (only when expanded) */}
+              
               {expanded && githubState === "public" && (
                 <button
                   onClick={(e) => {
@@ -584,17 +584,34 @@ export default function Portfolio() {
     <div className={`min-h-screen bg-black text-neutral-300 font-sans selection:bg-cyan-900 selection:text-cyan-100 ${mounted ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700`}>
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md h-14 flex items-center px-6 md:px-12 justify-between">
-        <div className="font-mono text-sm tracking-widest text-neutral-100 flex items-center gap-2">
-            <Terminal size={14} className="text-cyan-500" />
-            AYUSH M
+      <nav className="fixed top-0 left-0 w-full z-50 h-14 flex items-center justify-between px-6 md:px-12
+                      bg-neutral-950/80 backdrop-blur-md border-b border-neutral-900 shadow-lg transition-all duration-300">
+        
+        <div className="font-mono text-sm tracking-widest text-neutral-100 flex items-center gap-2 hover:text-cyan-500 transition-colors cursor-pointer">
+          <Terminal size={16} className="text-cyan-500" />
+          AYUSH M
         </div>
-        <div className="flex gap-6 text-[10px] sm:text-xs font-mono text-neutral-500">
-            <a href="#projects" className="hover:text-cyan-500 transition-colors">PROJECTS</a>
-            <a href="#domains" className="hover:text-cyan-500 transition-colors">DOMAINS</a>
-            <span className="text-cyan-500/80">SYS_READY</span>
+        
+        
+        <div className="flex gap-6 text-[10px] sm:text-xs font-mono">
+          <a
+            href="#projects"
+            className="relative group text-neutral-500 hover:text-cyan-500 transition-colors"
+          >
+            PROJECTS
+            <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-cyan-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a
+            href="#domains"
+            className="relative group text-neutral-500 hover:text-cyan-500 transition-colors"
+          >
+            DOMAINS
+            <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-cyan-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <span className="text-cyan-500/80">SYS_READY</span>
         </div>
       </nav>
+
 
       <main className="pt-36 px-6 md:px-10 max-w-6xl mx-auto pb-24">
         
@@ -616,15 +633,22 @@ export default function Portfolio() {
             </p>
             
             <div className="flex flex-wrap gap-3 pt-4">
-               <button className="px-6 py-2 bg-neutral-100 text-neutral-950 text-sm font-medium hover:bg-cyan-500 hover:text-black transition-colors rounded-sm">
-                 View Work
-               </button>
-               <button className="px-6 py-2 border border-neutral-700 text-neutral-300 font-medium text-sm hover:border-neutral-500 transition-colors flex items-center gap-2">
-                <Github size={16} /> GitHub
-              </button>
-               <button className="px-6 py-2 border border-neutral-800 text-neutral-400 text-sm font-medium hover:border-neutral-600 hover:text-white transition-colors rounded-sm font-mono">
-                 Contact Me.
-               </button>
+               <button className="px-6 py-2 bg-neutral-100 text-neutral-950 text-sm font-medium hover:bg-cyan-500 hover:text-black transition-colors rounded-sm"
+               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
+                View Work
+                </button>
+                <button className="px-6 py-2 border border-neutral-700 text-neutral-300 font-medium text-sm hover:border-neutral-500 transition-colors flex items-center gap-2"
+                onClick={() => window.open('https://github.com/ayushm-75/', '_blank')}>
+                  <Github size={16} /> GitHub
+                </button>
+
+                <button
+                  className="px-6 py-2 border border-neutral-800 text-neutral-400 text-sm font-medium hover:border-neutral-600 hover:text-white transition-colors rounded-sm font-mono"
+                  onClick={() => document.querySelector('section.border-t').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Contact Me.
+                </button>
+
             </div>
           </div>
           
@@ -699,7 +723,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Deep Dive Section - BreatheSense Focus */}
+        {/* Deep Dive Section*/}
         <div className="mb-32">
             <div className="flex items-center gap-2 mb-6">
                 <MonoLabel className="text-cyan-500">DEEP DIVE ANALYSIS</MonoLabel>
