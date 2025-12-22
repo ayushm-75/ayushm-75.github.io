@@ -314,7 +314,7 @@ const ProjectCard = ({ project, expanded, onClick }) => {
   const githubState =
     project.github_url === "Private"
       ? "private"
-      : project.github_url === "Private till completed"
+      : project.github_url === "Private till done"
       ? "locked"
       : project.github_url
       ? "public"
@@ -386,7 +386,7 @@ const ProjectCard = ({ project, expanded, onClick }) => {
               {expanded && githubState === "locked" && (
                 <div className="flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded border border-neutral-800 text-neutral-500">
                   <Lock size={12} />
-                  Private till completed
+                  Private till done
                 </div>
               )}
 
@@ -500,7 +500,7 @@ export default function Portfolio() {
         { label: "Threat Model", value: "Zero-Trust Server" },
         { label: "Key Safety", value: "Client-Only Key Storage" }
       ],
-      github_url: "Private till completed"
+      github_url: "Private till done"
     },
     {
       id: 1,
