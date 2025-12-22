@@ -1,16 +1,32 @@
-# React + Vite
+# Ayush M. Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source for my personal portfolio website, which showcases my projects, skills, and areas of expertise.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Portfolio](https://ayushm-75.github.io)
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio highlights:
 
-## Expanding the ESLint configuration
+- Software and hardware projects I have built
+- Technical skills and tools I work with
+- Key features and insights for each project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Projects
+
+Each project includes:
+
+- A brief description
+- Technologies used
+- Key features
+- GitHub link (if public)
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+- Lucide Icons
+- Hosted on GitHub Pages
