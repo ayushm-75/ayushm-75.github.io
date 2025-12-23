@@ -200,12 +200,6 @@ const SystemIntegrationViz = () => {
           {/* Orbit Controls for user interaction (optional) */}
           <OrbitControls enableZoom={true} enablePan={false} />
         </Canvas>
-
-        {/* Overlay Text */}
-        <div className="absolute bottom-8 left-8 text-white font-mono opacity-60 pointer-events-none">
-          <h1 className="text-2xl font-bold tracking-wider">DNA SEQUENCE</h1>
-          <p className="text-xs">Visualisation AI made</p>
-        </div>
       </div>
     );
 };
@@ -809,7 +803,7 @@ export default function Portfolio() {
         <section className="border-t border-neutral-900 pt-16 pb-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">Initialize Contact.</h2>
+                    <h2 className="text-3xl font-bold text-white mb-2">Initialise Handshake.</h2>
                     <p className="text-neutral-500 max-w-md">
                         Open to collaboration on privacy-first systems, secure communication, and medical imaging research.
                     </p>
