@@ -854,10 +854,6 @@ export default function Portfolio() {
                 <div className="text-2xl font-bold text-purple-400 font-mono">3</div>
                 <div className="text-[10px] font-mono text-neutral-500 mt-1">FINALIST POSITIONS</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white font-mono">TOP 3</div>
-                <div className="text-[10px] font-mono text-neutral-500 mt-1">INTEL AI GLOBAL (INDIA)</div>
-              </div>
             </div>
           </div>
         </div>
