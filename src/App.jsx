@@ -845,7 +845,7 @@ export default function Portfolio() {
 
           {/* Summary Stats */}
           <div className="border border-neutral-800 bg-neutral-900/20 p-6 mt-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-cyan-400 font-mono">11+</div>
                 <div className="text-[10px] font-mono text-neutral-500 mt-1">NATIONAL COMPETITIONS ENROLLED</div>
