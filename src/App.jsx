@@ -898,37 +898,72 @@ export default function Portfolio() {
 
         {/* Contact */}
         <section className="border-t border-neutral-900 pt-16 pb-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">Initialise Handshake.</h2>
-                    <p className="text-neutral-500 max-w-md">
-                        Open to collaboration on privacy-first systems, secure communication, and medical imaging research.
-                    </p>
-                </div>
-                <div className="flex gap-6">
-                    <a href="mailto:ayushmallick228@gmail.com" className="group flex flex-col gap-1">
-                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">EMAIL</span>
-                        <span className="text-neutral-300 group-hover:text-white">ayushmallick228@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ayush-mallick-205b62371/" className="group flex flex-col gap-1">
-                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">LINKEDIN</span>
-                        <span className="text-neutral-300">Ayush Mallick</span>
-                    </a>
-                    <a href="https://www.instagram.com/ayu.sh_here70/" className="group flex flex-col gap-1">
-                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">INSTAGRAM</span>
-                        <span className="text-neutral-300">Ayush M</span>
-                    </a>
-                    <a href="https://www.reddit.com/user/OrbitalSoup/" className="group flex flex-col gap-1">
-                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">REDDIT</span>
-                        <span className="text-neutral-300">u/OrbitalSoup</span>
-                    </a>
-                </div>
-            </div>
-            <div className="mt-16 text-[10px] font-mono text-neutral-700 flex justify-between">
-                <span>© 2025 AYUSH M. NO TRACKERS. NO ANALYTICS.</span>
-                <FooterRenderTime />
-            </div>
-        </section>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+              <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Initialise Handshake.</h2>
+                  <p className="text-neutral-500 max-w-md text-sm sm:text-base">
+                      Open to collaboration on privacy-first systems, secure communication, and medical imaging research.
+                  </p>
+              </div>
+
+              {/* Contact Links - Grid for mobile, flex for desktop */}
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 md:flex md:gap-6">
+                  <a
+                      href="mailto:ayushmallick228@gmail.com"
+                      className="group flex flex-col gap-1"
+                  >
+                      <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">
+                          EMAIL
+                      </span>
+                      <span className="text-neutral-300 group-hover:text-white text-sm sm:text-base break-all md:break-normal">
+                          ayushmallick228@gmail.com
+                      </span>
+                  </a>
+
+                  <a
+                      href="https://www.linkedin.com/in/ayush-mallick-205b62371/"
+                      className="group flex flex-col gap-1"
+                  >
+                      <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">
+                          LINKEDIN
+                      </span>
+                      <span className="text-neutral-300 group-hover:text-white text-sm sm:text-base">
+                          Ayush Mallick
+                      </span>
+                  </a>
+
+                  <a
+                      href="https://www.instagram.com/ayu.sh_here70/" 
+                      className="group flex flex-col gap-1"
+                  >
+                      <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">
+                          INSTAGRAM
+                      </span>
+                      <span className="text-neutral-300 group-hover:text-white text-sm sm:text-base">
+                          @ayu.sh_here70
+                      </span>
+                  </a>
+
+                  <a
+                      href="https://www.reddit.com/user/OrbitalSoup/"
+                      className="group flex flex-col gap-1"
+                  >
+                      <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">
+                          REDDIT
+                      </span>
+                      <span className="text-neutral-300 group-hover:text-white text-sm sm:text-base">
+                          u/OrbitalSoup
+                      </span>
+                  </a>
+              </div>
+          </div>
+
+          {/* Footer - Stack on mobile, side by side on larger screens */}
+          <div className="mt-12 sm:mt-16 text-[10px] font-mono text-neutral-700 flex flex-col sm:flex-row justify-between gap-2 sm:gap-0">
+              <span>© 2025 AYUSH M. NO TRACKERS. NO ANALYTICS.</span>
+              <FooterRenderTime />
+          </div>
+      </section>
       </main>
     </div>
   );
