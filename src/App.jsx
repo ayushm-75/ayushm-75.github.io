@@ -447,6 +447,38 @@ const ProjectCard = ({ project, expanded, onClick }) => {
   );
 };
 
+const AchievementCard = ({ title, event, level, year, highlight = false }) => (
+  <div className={`border p-4 transition-all group hover:border-neutral-600 ${
+    highlight 
+      ? 'border-cyan-900/50 bg-cyan-950/10' 
+      : 'border-neutral-800 bg-neutral-900/30'
+  }`}>
+    <div className="flex items-start justify-between gap-2 mb-2">
+      <h4 className={`text-sm font-medium ${highlight ? 'text-cyan-400' : 'text-neutral-200'}`}>
+        {title}
+      </h4>
+      {highlight && (
+        <span className="text-[8px] font-mono px-1.5 py-0.5 bg-cyan-900/30 text-cyan-500 border border-cyan-900/50 rounded">
+          TOP
+        </span>
+      )}
+    </div>
+    <p className="text-xs text-neutral-500 mb-3">{event}</p>
+    <div className="flex items-center justify-between">
+      <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
+        level === 'National' 
+          ? 'border-purple-900/50 text-purple-400 bg-purple-950/20'
+          : level === 'International'
+          ? 'border-cyan-900/50 text-cyan-400 bg-cyan-950/20'
+          : 'border-neutral-800 text-neutral-500'
+      }`}>
+        {level}
+      </span>
+      <span className="text-[10px] font-mono text-neutral-600">{year}</span>
+    </div>
+  </div>
+);
+
 const TimelineItem = ({ year, title, desc, role }) => (
   <div className="relative pl-8 pb-12 border-l border-neutral-800 last:pb-0 last:border-l-0 group">
     <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 bg-neutral-900 border border-cyan-900 group-hover:bg-cyan-900/50 transition-colors rounded-full" />
@@ -571,6 +603,44 @@ export default function Portfolio() {
       icon: Brain,
       description: "Research-focused AI pipelines for medical imaging, specializing in brain tumor detection, instance segmentation, and clinical decision support with emphasis on accuracy and interpretability.",
       technologies: ["MRI Segmentation", "U-Net Architecture", "Medical Imaging", "Instance Segmentation", "Severity Scoring", "Clinical Visualization"]
+    }
+  ];
+
+  const achievements = [
+    {
+      title: "Country Level Top 3",
+      event: "Intel AI Global Impact Festival '25",
+      level: "International",
+      year: "2025",
+      highlight: true
+    },
+    {
+      title: "National Top 8",
+      event: "Vivo Ignite '24",
+      level: "National",
+      year: "2024",
+      highlight: true
+    },
+    {
+      title: "National Top 10",
+      event: "JKLU Ideathon",
+      level: "National",
+      year: "2024",
+      highlight: true
+    },
+    {
+      title: "Level 2 Qualifier",
+      event: "Smart India Hackathon",
+      level: "National",
+      year: "2024",
+      highlight: false
+    },
+    {
+      title: "Participant & Recognition",
+      event: "School Innovation Council",
+      level: "National",
+      year: "2023-24",
+      highlight: false
     }
   ];
 
@@ -763,11 +833,38 @@ export default function Portfolio() {
             </div>
         </div>
 
-        
+        {/* Achievements Section */}
+        <div className="mb-32">
+          <SectionHeader number="4" title="Achievements & Recognition" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {achievements.map((achievement, idx) => (
+              <AchievementCard key={idx} {...achievement} />
+            ))}
+          </div>
+
+          {/* Summary Stats */}
+          <div className="border border-neutral-800 bg-neutral-900/20 p-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400 font-mono">11+</div>
+                <div className="text-[10px] font-mono text-neutral-500 mt-1">NATIONAL COMPETITIONS ENROLLED</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400 font-mono">3</div>
+                <div className="text-[10px] font-mono text-neutral-500 mt-1">FINALIST POSITIONS</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white font-mono">TOP 3</div>
+                <div className="text-[10px] font-mono text-neutral-500 mt-1">INTEL AI GLOBAL (INDIA)</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Timeline */}
         <div className="mb-12">
-            <SectionHeader number="4" title="Progression" />
+            <SectionHeader number="5" title="Progression" />
             <div className="max-w-3xl">
               <TimelineItem 
                 year="2024 - Present"
@@ -812,6 +909,14 @@ export default function Portfolio() {
                     <a href="mailto:ayushmallick228@gmail.com" className="group flex flex-col gap-1">
                         <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">EMAIL</span>
                         <span className="text-neutral-300 group-hover:text-white">ayushmallick228@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-mallick-205b62371/" className="group flex flex-col gap-1">
+                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">LINKEDIN</span>
+                        <span className="text-neutral-300">Ayush Mallick</span>
+                    </a>
+                    <a href="https://www.instagram.com/ayu.sh_here70/" className="group flex flex-col gap-1">
+                        <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">INSTAGRAM</span>
+                        <span className="text-neutral-300">Ayush M</span>
                     </a>
                     <a href="https://www.reddit.com/user/OrbitalSoup/" className="group flex flex-col gap-1">
                         <span className="text-[10px] font-mono text-neutral-600 group-hover:text-cyan-500 transition-colors">REDDIT</span>
